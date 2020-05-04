@@ -1,0 +1,44 @@
+{ "veggies": [
+    {
+    "id": 1,
+    "name": "Lettuce",
+    "image_url":  "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/lettuce.jpg",
+    "bg_image_url": "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/lettuce_bg.jpeg",  
+    "description": "Lettuce grows quickly, is really easy to harvest (just snip the tops off the plants or pick leaves as needed), and takes up very little space. It can even be grown in containers, perhaps accompanied by flowers or tucked under taller plants. I’ve had success directly seeding them even in partly shady areas."
+},
+{
+    "id": 2,
+    "name": "Tomatoes",
+    "image_url":  "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/tomatoes.jpg",
+    "bg_image_url": "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/tomato_bg.jpg",  
+    "description": "Possibly the most popular vegetable for any size garden, you can grow tomatoes in hanging baskets or other containers or anywhere they’ll get lots of sun and have support for their stalks. Starter plants from a garden center at your local hardware store or a dedicated plant nursery are the easiest to grow."
+},
+{
+    "id": 3,
+    "name": "Cucumbers",
+    "image_url":  "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/cuccumbers.jpg",
+    "bg_image_url": "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/cucumber_bg.jpg",  
+    "description": "Cucumbers like sunlight and warm temperatures, as well as support for climbing. (Thanks to their vertical growth, cukes do well in containers.) Once you give them these and water them regularly, they grow almost like weeds. You’ll probably have enough cucumbers to donate to your neighbors."
+},
+{
+    "id": 4,
+    "name": "Carrots",
+    "image_url":  "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/carrots.jpg",
+    "bg_image_url": "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/carrots_bg.jpg", 
+    "description": "Remember those projects from grade school where you grew carrot greens from their tops? Whole carrots are pretty easy to grow in the ground as well. The only thing about carrots is they might not grow very large, especially if you have rocky soil. Deep, well-drained soil is preferable—a raised bed is a good idea. Nevertheless, carrots are simple and fun to grow (your kids might even want to help). They tolerate light shade too, although, like most plants, they prefer full sun."
+},
+{
+    "id": 5,
+    "name": "Radishes",
+    "image_url":  "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/raddishes.jpg",
+    "bg_image_url": "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/radish_bg.jpg",  
+    "description": "You can slice radishes into a salad, but they’re also much more versatile than that, as appetizers, snacks and side dishes. Even though not everyone loves them, once you see how easy they are to grow, you might add them to your garden. They take just 20 days to reach full size! Harvest to Table has some great tips for growing these little red babies, too."
+},
+{
+    "id": 6,
+    "name": "Pumpkins",
+    "image_url":  "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/pumkins.jpg",
+    "bg_image_url": "/Users/macbook/Flatiron/mod3/final-project/practice/backend/veggie_images/pumpkin_bg.jpg",  
+    "description": "Pumpkins are relatively easy to grow and are great to have around during the autumn season. As you probably know from baking and carving, there are different types of pumpkins and some are simpler to grow than others."
+}
+]}
