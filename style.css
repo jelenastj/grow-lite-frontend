@@ -28,13 +28,13 @@ html {
 
   #panels-container {
         min-height: 100vh;
-        border: 1px solid blue;
-        /* overflow: hidden; */
+        /* border: 1px solid blue; */
+        overflow: hidden;
         display: flex;
   }
 
   .panel {
-    border: 2px dotted red;
+    /* border: 2px dotted red; */
     /* box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); */
     color: white;
     /* text-align: center; */
@@ -68,8 +68,8 @@ html {
 
   .panel > *:first-child { transform: translateY(-100%); }
   .panel.open-active > *:first-child { transform: translateY(0); }
-  /* .panel > *:nth-child(2) { transform: translateY(-200%); }
-  .panel.open-active > *:nth-child(2) { transform: translateY(0); } */
+  .panel > *:nth-child(2) { transform: translateY(-200%); }
+  .panel.open-active > *:nth-child(2) { transform: translateY(0); }
   .panel > *:last-child { transform: translateY(100%); }
   .panel.open-active > *:last-child { transform: translateY(0); }
   
@@ -77,21 +77,21 @@ html {
   .veggie-info {
       max-height: 40vh;
       flex: 2;
-      border: 2px solid black;
+      /* border: 2px solid black; */
       overflow-y: scroll;
   }
 
   .instructions {
     max-height: 40vh;
     flex: 2;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     overflow-y: scroll;
   }
 
   .comments {
       max-height: 30vh;
       flex: 1;
-      border: 2px solid black;
+      /* border: 2px solid black; */
       overflow-y: scroll;
   }
 
