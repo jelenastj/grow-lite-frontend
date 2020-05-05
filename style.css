@@ -64,6 +64,9 @@ html {
     flex-direction: column;
     /* justify-content: center; */
     /* align-items: center; */
+    background-color: rgba(0,0,0, 0.6);
+    padding: 0px 20px 0px 20px;
+
   }
 
   .panel > *:first-child { transform: translateY(-100%); }
@@ -79,6 +82,8 @@ html {
       flex: 2;
       /* border: 2px solid black; */
       overflow-y: scroll;
+      /* background-color: rgba(0,0,0, 0.6); */
+
   }
 
   .instructions {
@@ -86,6 +91,8 @@ html {
     flex: 2;
     /* border: 2px solid black; */
     overflow-y: scroll;
+    /* background-color: rgba(0,0,0, 0.6); */
+
   }
 
   .comments {
@@ -93,6 +100,7 @@ html {
       flex: 1;
       /* border: 2px solid black; */
       overflow-y: scroll;
+      /* background-color: rgba(0,0,0, 0.6); */
   }
 
 
@@ -101,4 +109,32 @@ html {
     font-size: 20px;
     /* display: grid;
     grid-template-columns: 10% 10% 10% 10% 10% 50%; */
+          background-color: rgba(0,0,0, 0.6);
+
   }
+
+
+#veggie-one {
+  background-image: url("https://www.johnnyseeds.com/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw3dccf726/images/products/vegetables/03056jp_01_greenmultileafbutterfieldhorz.jpg?sw=774&cx=302&cy=0&cw=1196&ch=1196"
+  );
+}
+
+#veggie-two {
+  background-image: url("https://static.toiimg.com/photo/68903018.cms");
+}
+#veggie-three {
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cucumber-slice-royalty-free-image-153556336-1562870568.jpg");
+}
+#veggie-four {
+  background-image: url("https://www.jessicagavin.com/wp-content/uploads/2019/02/carrots-7-1200.jpg"
+  );
+}
+#veggie-five {
+  background-image: url("https://www.highmowingseeds.com/media/catalog/product/cache/f24fe076cc2f73119e7261920a5836c5/2/8/2874.jpg"
+
+  );
+}
+#veggie-six {
+  background-image: url("https://images.unsplash.com/photo-1570586437263-ab629fccc818?ixlib=rb-1.2.1&w=1000&q=80");
+}
+
