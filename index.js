@@ -59,8 +59,18 @@ function createPanels() {
         const comments = document.createElement('ul');
         veggie.comments.forEach(comment => {
             const li = document.createElement('li');
+            li.dataset.id = comment.id
             li.innerText = comment.content;
+
+            const deleteButton = document.createElement('button')
+            deleteButton.classList.add("delete-comment")
+            deleteButton.dataset.num = veggie.id
+            deleteButton.innerText = "Delete"
+            deleteButton.addEventListener('click', deleteComment)
+            li.append(deleteButton);
+
             comments.append(li);
+
         });
 
         const newCommentForm = document.createElement('form');
@@ -78,11 +88,15 @@ function createPanels() {
         newCommentForm.addEventListener('submit', (e) => {
             const newComment = document.createElement('li');
             newComment.innerText = e.target.content.value;
-            comments.append(newComment);
-            newCommentForm.reset();
-            e.preventDefault();
 
-            fetch(`http://localhost:3000/veggies/${veggieg.id}`, {
+            const deleteButton = document.createElement('button')
+            deleteButton.classList.add("delete-comment")
+            deleteButton.innerText = "Delete"
+            deleteButton.addEventListener('click', deleteComment)
+            newComment.append(deleteButton)
+
+            
+            fetch(`http://localhost:3000/veggies/${veggie.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
@@ -94,9 +108,15 @@ function createPanels() {
                         content: newComment.innerText
                     }
                 })
-            });
-        });
+            })
+            .then(r => r.json())
+            .then(json => newComment.dataset.id = json.comments[json.comments.length-1].id);
 
+            comments.append(newComment);
+            newCommentForm.reset();
+            e.preventDefault();
+        });
+        
         thirdChild.append(comments);
         thirdChild.append(newCommentForm);
 
@@ -130,3 +150,18 @@ function panelListeners() {
     panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 };
+
+function deleteComment(e) {
+    const commentId = e.target.parentElement.dataset.id
+    e.target.parentElement.remove();
+
+    fetch(`http://localhost:3000/comments/${commentId}`, {
+        method: "DELETE"
+        // headers: {
+        //     "Content-Type": "application/json",
+        //     "Accepts": "application/json"
+        // }
+    });
+
+
+}
