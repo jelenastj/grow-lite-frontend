@@ -1,118 +1,128 @@
 html {
-    box-sizing: border-box;
-    background: #43975f;
-    font-family: 'helvetica neue';
-    font-size: 20px;
-    font-weight: 200;
-  }
+  box-sizing: border-box;
+  background: black;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
 
-  body {
-    margin: 0;
-  }
+body {
+  margin: 0;
+}
 
-  /* h1 {
-    z-index: 1;
-    color: white;
-    font-family: 'Amatic SC', cursive;
-    font-size: 3em;
-    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
-    text-align: center;
-    background-image: url('https://images.assetsdelivery.com/compings_v2/merkulovnik/merkulovnik1512/merkulovnik151200158.jpg');
-     background-position: bottom;
-    margin: 0 0 0 0;
-  } */
+h1 {
+  z-index: 1;
+  color: white;
+  /* font-family: 'Amatic SC', cursive; */
+  font-size: 3em;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  background-image: url("https://www.jongia.com/wp-content/uploads/2019/04/Vegetable-field-groot-shutterstock-aangekocht.jpg");
+  filter: brightness(0.9);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
+  /* background-position: bottom; */
+  margin: 0 0 0 0;
+  padding: 50px 0 50px 0;
+}
 
-  /* *, *:before, *:after {
+/* *, *:before, *:after {
     box-sizing: inherit;
   } */
 
-  #panels-container {
-        min-height: 100vh;
-        /* border: 1px solid blue; */
-        overflow: hidden;
-        display: flex;
-  }
+#panels-container {
+  min-height: 100vh;
+  /* border: 1px solid blue; */
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  display: flex;
+}
 
-  .panel {
-    /* border: 2px dotted red; */
-    /* box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); */
-    color: white;
-    /* text-align: center; */
-    align-items: center; 
-    /* Safari transitionend event.propertyName === flex  */
-    /* Chrome + FF transitionend event.propertyName === flex-grow */
-    transition:
-      font-size 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-      flex 0.7s cubic-bezier(0.61,-0.19, 0.7,-0.11),
-      background 0.2s;
-    /* font-size: 20px; */
-    background-size: cover;
-    background-position: center;
-    flex: 1;
-    /* justify-content: center; */
-    display: flex;
-    flex-direction: column;
-    /* flex-direction: column;  */
-  }
+.panel {
+  /* border: 2px dotted red; */
+  /* box-shadow: inset 0 0 0 5px rgba(255,255,255,0.1); */
+  color: white;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  /* text-align: center; */
+  align-items: center;
+  /* Safari transitionend event.propertyName === flex  */
+  /* Chrome + FF transitionend event.propertyName === flex-grow */
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+  /* font-size: 20px; */
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column;  */
+}
 
-  .panel > * {
-    /* margin: 0; */
-    /* width: 100%; */
-    /* transition: transform 0.5s; */
-    /* flex: .5 0 auto; */
-    display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
-    /* align-items: center; */
-    background-color: rgba(0,0,0, 0.6);
-    padding: 0px 20px 0px 20px;
+.panel>* {
+  /* margin: 0; */
+  /* width: 100%; */
+  transition: 0.7s;
+  flex: .5 0 auto;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* align-items: center; */
+  padding: 0px 20px 0px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #aaa;
+  border: solid 5px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
+  border-color: rgba(0, 0, 0, 0.4);
+}
 
-  }
+.panel>*:first-child {
+  transform: translateY(-175%);
+}
 
-  .panel > *:first-child { transform: translateY(-100%); }
-  .panel.open-active > *:first-child { transform: translateY(0); }
-  .panel > *:nth-child(2) { transform: translateY(-200%); }
-  .panel.open-active > *:nth-child(2) { transform: translateY(0); }
-  .panel > *:last-child { transform: translateY(100%); }
-  .panel.open-active > *:last-child { transform: translateY(0); }
-  
+.panel.open-active>*:first-child {
+  transform: translateY(0);
+}
 
-  .veggie-info {
-      max-height: 40vh;
-      flex: 2;
-      /* border: 2px solid black; */
-      overflow-y: scroll;
-      /* background-color: rgba(0,0,0, 0.6); */
+/* .panel>*:nth-child(2) {
+  transform: translateY(-215%);
+}
 
-  }
+.panel.open-active>*:nth-child(2) {
+  transform: translateY(0);
+} */
 
-  .instructions {
-    max-height: 40vh;
-    flex: 2;
-    /* border: 2px solid black; */
-    overflow-y: scroll;
-    /* background-color: rgba(0,0,0, 0.6); */
+.panel>*:last-child {
+  transform: translateY(115%);
+}
 
-  }
+.panel.open-active>*:last-child {
+  transform: translateY(0);
+}
 
-  .comments {
-      max-height: 30vh;
-      flex: 1;
-      /* border: 2px solid black; */
-      overflow-y: scroll;
-      /* background-color: rgba(0,0,0, 0.6); */
-  }
+.veggie-info {
+  max-height: 40vh;
+  flex: 1;
+  overflow-y: scroll;
+}
 
+.instructions {
+  max-height: 40vh;
+  flex: 1;
+  overflow-y: scroll;
+}
 
-  .panel.open {
-    flex: 6;
-    font-size: 20px;
-    /* display: grid;
-    grid-template-columns: 10% 10% 10% 10% 10% 50%; */
-          background-color: rgba(0,0,0, 0.6);
+.comments {
+  max-height: 30vh;
+  flex: 1;
+  overflow-y: scroll;
+}
 
-  }
-
+.panel.open {
+  flex: 6;
+  width: 60vh
+  font-size: 20px;
+}
 
 /* #veggie-one {
   background-image: url("https://www.johnnyseeds.com/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw3dccf726/images/products/vegetables/03056jp_01_greenmultileafbutterfieldhorz.jpg?sw=774&cx=302&cy=0&cw=1196&ch=1196"
@@ -137,4 +147,3 @@ html {
 #veggie-six {
   background-image: url("https://images.unsplash.com/photo-1570586437263-ab629fccc818?ixlib=rb-1.2.1&w=1000&q=80");
 } */
-
