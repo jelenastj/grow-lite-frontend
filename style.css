@@ -95,13 +95,13 @@ h1 {
   transform: translateY(50%);
 }
 
-/* .veggie-info {
-  max-height: 40vh;
+.veggie-info {
+  margin-top: 5%;
   flex: 1;
   overflow-y: scroll;
 }
 
-.instructions {
+/* .instructions {
   max-height: 40vh;
   flex: 1;
   overflow-y: scroll;
