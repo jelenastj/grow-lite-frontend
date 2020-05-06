@@ -8,4 +8,23 @@ function createContainer(v, i) {
 };
 
 
+function createToggleButton() {
+    const toggleButton = document.createElement('button');
+    toggleButton.classList.add('toggle');
+    toggleButton.innerText = "⇱"
 
+    // consider refactoring
+    toggleButton.addEventListener('click', toggleOpen)
+
+    return toggleButton;
+}
+
+
+function toggleOpen() {
+    if (this.innerText === "⇲") {
+        this.innerText = "⇱"
+    } else {
+        this.innerText = "⇲"
+    };
+    this.parentElement.classList.toggle('open');
+};

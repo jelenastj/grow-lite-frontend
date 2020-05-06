@@ -14,16 +14,17 @@ function createPanels() {
     veggies.forEach((veggie, index) => {
         const container = createContainer(veggie, index);
         container.append(createFirstChild(veggie));
+        container.append(createToggleButton());
         container.append(createLastChild(veggie));
         panelsContainer.append(container);
     });
 
 };
 
-function toggleOpen() {
-    this.classList.toggle('open');
-    // slide title out of view
-};
+// function toggleOpen() {
+//     this.classList.toggle('open');
+//     // slide title out of view
+// };
 
 function toggleActive(e) {
     if (e.propertyName.includes('flex')) {
@@ -33,7 +34,7 @@ function toggleActive(e) {
 
 function panelListeners() {
     const panels = document.querySelectorAll('.panel');
-    panels.forEach(panel => panel.addEventListener('click', toggleOpen));
+    // panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 };
 
