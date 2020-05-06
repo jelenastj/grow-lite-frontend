@@ -82,7 +82,7 @@ function createPanels() {
             newCommentForm.reset();
             e.preventDefault();
 
-            fetch(`http://localhost:3000/veggies/${veggie.id}`, {
+            fetch(`http://localhost:3000/veggies/${veggieg.id}`, {
                 method: "PATCH",
                 headers: {
                     "Content-Type": "application/json",
