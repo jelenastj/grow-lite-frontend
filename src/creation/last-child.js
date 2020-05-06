@@ -72,11 +72,5 @@ function deleteComment(e) {
     const commentId = e.target.parentElement.dataset.id
     e.target.parentElement.remove();
 
-    fetch(`http://localhost:3000/comments/${commentId}`, {
-        method: "DELETE"
-        // headers: {
-        //     "Content-Type": "application/json",
-        //     "Accepts": "application/json"
-        // }
-    });
+    fetch(`http://localhost:3000/comments/${commentId}`, {method: "DELETE"});
 }
