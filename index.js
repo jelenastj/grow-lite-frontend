@@ -46,12 +46,12 @@ function createPanels() {
             firstChild.append(dataList);
 
 
-            const secondChild = document.createElement('div')
-            secondChild.classList.add('instructions');
-                const instructions = document.createElement('p');
-                instructions.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
+            // const secondChild = document.createElement('div')
+            // secondChild.classList.add('instructions');
+            //     const instructions = document.createElement('p');
+            //     instructions.innerText = "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.";
 
-            secondChild.append(instructions);
+            // secondChild.append(instructions);
 
             const thirdChild = document.createElement('div')
             thirdChild.classList.add("comments");
@@ -93,7 +93,7 @@ function createPanels() {
 
         
         container.append(firstChild);
-        container.append(secondChild);
+        // container.append(secondChild);
         container.append(thirdChild);
         panelsContainer.append(container);
     });
