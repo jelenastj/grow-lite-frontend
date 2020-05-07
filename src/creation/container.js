@@ -21,7 +21,7 @@ function createToggleButton() {
 
 function createTitle(v) {
     const titleContainer = document.createElement('span')
-    const title = document.createElement('h3');
+    const title = document.createElement('h4');
     title.innerText = v.name;
     titleContainer.append(title);
     titleContainer.classList.add('panel-title-container');
