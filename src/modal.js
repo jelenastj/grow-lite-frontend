@@ -1,22 +1,26 @@
 document.addEventListener("DOMContentLoaded", () =>{
+const userModal = document.getElementById("user-modal");
+const veggieModal = document.getElementById("veggies-modal")
 
 const signUpButton = document.getElementById('user-button');
-signUpButton.addEventListener('click', displaySignup);
-const closeButton = document.querySelector('.close');
-closeButton.addEventListener('click', closeSignUp);
+signUpButton.addEventListener('click', ()=> {displayModal("user-modal")});
+const userClosedButton = userModal.querySelector('.close');
+userClosedButton.addEventListener('click', ()=> {closeModal("user-modal")});
 const signUpForm = document.getElementById('user-form');
 signUpForm.addEventListener('submit', setUser)
 
+const veggieSelButton = document.getElementById('select-veggies');
+const veggiesClosedButton = veggieModal.querySelector(".close");
+veggieSelButton.addEventListener('click', ()=> {displayModal("veggies-modal")});
+veggiesClosedButton.addEventListener('click', ()=> {closeModal("veggies-modal")});
 });
 
-function displaySignup(e){
-    const signUpDiv = document.getElementById('user-modal');
-    signUpDiv.style.display = "flex"
+function displayModal(id){
+    document.getElementById(id).style.display = "flex"
 }
 
-function closeSignUp(e){
-    const signUpDiv = document.getElementById('user-modal');
-    signUpDiv.style.display = "none"
+function closeModal(id){
+    document.getElementById(id).style.display = "none"
 }
 
 function setUser(e){
