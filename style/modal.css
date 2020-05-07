@@ -7,6 +7,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: none;
 }
 
 .modal {
@@ -28,6 +29,15 @@
     position: absolute;
     top: 0;
     right: 14px;
+    font-size: 42px;
+    transform: rotate(45deg);
+    cursor: pointer;
+}
+
+.modal-avatar {
+    width: 25%;
+    height: 40%;
+    margin: 20px auto;
 }
 
 /* .sign-up-button {
