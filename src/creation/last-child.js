@@ -7,6 +7,8 @@ function createLastChild(v) {
         const li = document.createElement('li');
         li.dataset.id = comment.id
         li.innerText = comment.content;
+        // add username <span> to the li
+        // ?? how do we account for a comment who's username has changed
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
