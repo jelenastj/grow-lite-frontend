@@ -5,18 +5,36 @@
     <meta charset="UTF-8">
     <title>Grow Lite 🌱</title>
     <link href='https://fonts.googleapis.com/css?family=Amatic+SC' rel='stylesheet' type='text/css'>
-    <link href="style.css" rel='stylesheet' type='text/css'>
+    <link href="style/style.css" rel='stylesheet' type='text/css'>
+    <link href="style/modal.css" rel='stylesheet' type='text/css'>
     <script src="src/creation/container.js" type="text/javascript"></script>
     <script src="src/creation/first-child.js" type="text/javascript"></script>
     <script src="src/creation/last-child.js" type="text/javascript"></script>
 </head>
 
 <body>
-
-    <h1>Welcome to Grow-Lite!</h1>
+    
+    <div id="title-bar">
+        <button id="user-button">Sign Up</button>
+        <button id="select-veggies">Select Veggies</button>
+        <h1>Welcome to Grow-Lite!</h1>
+    </div>
 
     <div id="panels-container">
     
+    </div>
+
+    <!-- Modals -->
+
+    <div id="user-modal" class="modal-bg">
+        <div class="modal">
+            <div class="close">+</div>
+            <img class="modal-avatar" src=https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/woman-farmer-light-skin-tone.png alt="Farmer Woman">
+            <form>
+                <input class="username" type="text" placeholder="Username">
+                <input class="sign-up-button" type="Submit" value="Sign Up">
+            </form>
+        </div>
     </div>
 
     <script type="text/javascript" src="src/index.js">
