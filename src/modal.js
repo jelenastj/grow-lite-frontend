@@ -40,8 +40,8 @@ function setUser(e){
     })
     .then(resp => resp.json())
     .then(json => { 
-        currentUser = json.username;
-        document.getElementById('user-button').innerText = currentUser
+        currentUser = json;
+        document.getElementById('user-button').innerText = currentUser.username
         closeModal("user-modal");
     });
 };

@@ -34,7 +34,7 @@ function createLastChild(v) {
     newCommentForm.append(submit);
     newCommentForm.addEventListener('submit', (e) => {
         const newComment = document.createElement('li');
-        newComment.innerText = e.target.content.value;
+        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span> ${e.target.content.value}`;
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
@@ -51,7 +51,7 @@ function createLastChild(v) {
             },
             body: JSON.stringify({
                 comment: {
-                    user_id: 4, // abstract to currentUser
+                    user_id: currentUser.id, // abstract to currentUser
                     content: newComment.innerText
                 }
             })
