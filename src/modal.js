@@ -28,7 +28,6 @@ function closeModal(id){
 function setUser(e){
     e.preventDefault();
     const username = e.target.username.value;
-    console.log(username)
     fetch("http://localhost:3000/users", {
         method: "POST",
         headers: {
@@ -42,6 +41,7 @@ function setUser(e){
     .then(resp => resp.json())
     .then(json => { 
         currentUser = json.username;
+        document.getElementById('user-button').innerText = currentUser
         closeModal("user-modal");
     });
 };
