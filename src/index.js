@@ -1,17 +1,24 @@
 const panelsContainer = document.getElementById('panels-container');
 let veggies;
+let currentVeggies;
 
 fetch("http://localhost:3000/veggies")
     .then(resp => resp.json())
     .then(json => {
-        veggies = json;
-        createPanels();
-        panelListeners();
+        veggies = json
+        currentVeggies = veggies.slice(0, 6)
+        renderVeggies()
+        addCheckBoxesToVeggieForm();
     });
 
 
+function renderVeggies () {
+    createPanels()
+    panelListeners()
+}
+
 function createPanels() {
-    veggies.forEach((veggie, index) => {
+    currentVeggies.forEach((veggie, index) => {
         const container = createContainer(veggie, index);
         container.append(createFirstChild(veggie));
         container.append(createToggleButton());

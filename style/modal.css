@@ -40,6 +40,10 @@
     margin: 20px auto;
 }
 
+.modal-button {
+    cursor: pointer;
+}
+
 /* .sign-up-button {
 
 } */
