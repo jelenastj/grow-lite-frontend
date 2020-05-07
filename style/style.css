@@ -12,7 +12,8 @@ body {
 
 #title-bar {
   position: relative;
-  background-image: url("https://www.jongia.com/wp-content/uploads/2019/04/Vegetable-field-groot-shutterstock-aangekocht.jpg");
+  background-image: url("https://images.pexels.com/photos/974316/pexels-photo-974316.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: 1600px 1800px;
   filter: brightness(0.9);
   /* border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
   /* background-position: bottom; */
