@@ -146,6 +146,10 @@ h1 {
   color: pink;
 }
 
+.hidden {
+  display: none;
+}
+
 /* #veggie-one {
   background-image: url("https://www.johnnyseeds.com/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw3dccf726/images/products/vegetables/03056jp_01_greenmultileafbutterfieldhorz.jpg?sw=774&cx=302&cy=0&cw=1196&ch=1196"
   );

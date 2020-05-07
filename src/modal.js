@@ -42,6 +42,7 @@ function setUser(e){
     .then(json => { 
         currentUser = json;
         document.getElementById('user-button').innerText = currentUser.username
+        document.querySelectorAll('.comment-form').forEach(form => form.classList.remove('hidden'))
         closeModal("user-modal");
     });
 };

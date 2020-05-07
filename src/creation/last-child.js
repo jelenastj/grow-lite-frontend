@@ -22,6 +22,8 @@ function createLastChild(v) {
 
     const newCommentForm = document.createElement('form');
     newCommentForm.id = `${v.name}-comment`;
+    newCommentForm.classList.add('comment-form')
+    newCommentForm.classList.add('hidden')
     const text = document.createElement('input');
     text.name = "content"
     text.placeholder = "add a tip"
@@ -29,6 +31,7 @@ function createLastChild(v) {
     const submit = document.createElement('input');
     submit.type = "submit";
     submit.value = "Add";
+
 
     newCommentForm.append(text);
     newCommentForm.append(submit);
