@@ -7,15 +7,18 @@ fetch("http://localhost:3000/veggies")
     .then(json => {
         veggies = json
         currentVeggies = json.slice(0, 6)
-        createPanels();
+        renderVeggies()
         addCheckBoxesToVeggieForm();
-        panelListeners();
     });
 
 
+function renderVeggies () {
+    createPanels()
+    panelListeners()
+}
 
 function createPanels() {
-    veggies.forEach((veggie, index) => {
+    currentVeggies.forEach((veggie, index) => {
         const container = createContainer(veggie, index);
         container.append(createFirstChild(veggie));
         container.append(createToggleButton());

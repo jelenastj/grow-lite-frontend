@@ -62,5 +62,7 @@ function handleSelectVeggies (e) {
         return veggies.find(veggie => veggie.id === id)
     })
 
-    console.log(currentVeggies);
+    panelsContainer.innerHTML = '';
+    renderVeggies();
+    closeModal("veggies-modal");
 }
