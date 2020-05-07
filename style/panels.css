@@ -53,8 +53,6 @@
 }
 
 .veggie-info {
-    margin-top: 5%;
-    flex: 1;
     overflow-y: scroll;
 }
 
