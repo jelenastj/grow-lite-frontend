@@ -29,12 +29,8 @@ function createPanels() {
 
 };
 
-// function toggleOpen() {
-//     this.classList.toggle('open');
-//     // slide title out of view
-// };
-
 function toggleActive(e) {
+    console.log(e)
     if (e.propertyName.includes('flex')) {
         this.classList.toggle('open-active');
     };
@@ -42,8 +38,18 @@ function toggleActive(e) {
 
 function panelListeners() {
     const panels = document.querySelectorAll('.panel');
-    // panels.forEach(panel => panel.addEventListener('click', toggleOpen));
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 };
 
 
+
+
+
+// OLD
+
+// function toggleOpen() {
+//     this.classList.toggle('open');
+//     // slide title out of view
+// };
+
+// panels.forEach(panel => panel.addEventListener('click', toggleOpen));

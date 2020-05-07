@@ -23,7 +23,14 @@
     flex: 1 0 auto;
     display: flex;
     flex-direction: column;
-    padding: 0px 20px 0px 20px;
+}
+
+.panel>*:first-child {
+    margin-top: 25px;
+    transform: translateY(-175%);
+    width: 90%;
+    height: 60%;
+    padding: 20px 10px;
     -moz-border-radius: 10px;
     -webkit-border-radius: 10px;
     border-radius: 10px;
@@ -33,21 +40,9 @@
     border-color: rgba(0, 0, 0, 0.4);
 }
 
-.panel>*:first-child {
-    transform: translateY(-175%);
-}
-
 .panel.open-active>*:first-child {
     transform: translateY(0);
 }
-
-/* .panel>*:nth-child(2) {
-    transform: translateY(-215%);
-  }
-  
-  .panel.open-active>*:nth-child(2) {
-    transform: translateY(0);
-  } */
 
 .panel>*:last-child {
     transform: translateY(300%);
@@ -58,10 +53,12 @@
 }
 
 .veggie-info {
-    margin-top: 5%;
-    flex: 1;
     overflow-y: scroll;
 }
+
+/* .title-open {
+    transform: translateX(0);
+} */
 
 /* .instructions {
     max-height: 40vh;
@@ -82,26 +79,20 @@
 }
 
 .panel-title-container {
+    position: absolute;
+    top: 110px;
     color: black;
-    background-color: rgba(255, 255, 255, 0.76);
-    height: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 95px;
     width: 100%;
-    margin-top: 100px;
-    text-align: center;
-    transition: 0.7s;
-    /* padding: 2.5vh 4vh 2.5vh 4vh; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
     font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-
-/* .title-container {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.76);
-  height: 100px;
-  width: 100%;
-  margin-top: 100px;
-  text-align: center;
-  transition: 0.7s;
-  padding: 2.5vh 4vh 2.5vh 4vh;
-  font-size: 30px;
-} */
+.title-close {
+    transform: translateX(-200%);
+}
