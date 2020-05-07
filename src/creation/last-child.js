@@ -55,7 +55,7 @@ function createLastChild(v) {
             body: JSON.stringify({
                 comment: {
                     user_id: currentUser.id, // abstract to currentUser
-                    content: newComment.innerText
+                    content: e.target.content.value
                 }
             })
         })
