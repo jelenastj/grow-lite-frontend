@@ -15,6 +15,8 @@ const veggieSelButton = document.getElementById('select-veggies');
 const veggiesClosedButton = veggieModal.querySelector(".close");
 veggieSelButton.addEventListener('click', ()=> {displayModal("veggies-modal")});
 veggiesClosedButton.addEventListener('click', ()=> {closeModal("veggies-modal")});
+
+document.getElementById('veggies-form').addEventListener('submit', handleSelectVeggies)
 });
 
 function displayModal(id){
@@ -46,3 +48,17 @@ function setUser(e){
     });
 };
 
+function handleSelectVeggies (e) {
+    let ids = [];
+
+    e.preventDefault();
+    e.target.querySelectorAll('.checkbox').forEach(checkbox => {
+        if (checkbox.checked) {
+            ids.push(checkbox.value)
+        }
+    })
+
+    currentVeggies = ids.map(id => {
+        return veggies.find(veggie => veggie.id == id)
+    })
+}
