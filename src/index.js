@@ -6,7 +6,7 @@ fetch("http://localhost:3000/veggies")
     .then(resp => resp.json())
     .then(json => {
         veggies = json
-        currentVeggies = json.slice(0, 6)
+        currentVeggies = veggies.slice(0, 6)
         renderVeggies()
         addCheckBoxesToVeggieForm();
     });
