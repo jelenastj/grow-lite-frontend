@@ -10,23 +10,40 @@ body {
   margin: 0;
 }
 
+#title-bar {
+  position: relative;
+  background-image: url("https://www.jongia.com/wp-content/uploads/2019/04/Vegetable-field-groot-shutterstock-aangekocht.jpg");
+  filter: brightness(0.9);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
+  /* background-position: bottom; */
+  margin: 0 0 0 0;
+  padding: 4vh 0 4vh 0;
+}
+
 h1 {
   color: white;
   /* font-family: 'Amatic SC', cursive; */
   font-size: 3em;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   text-align: center;
-  background-image: url("https://www.jongia.com/wp-content/uploads/2019/04/Vegetable-field-groot-shutterstock-aangekocht.jpg");
-  filter: brightness(0.9);
-  /* border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
-  /* background-position: bottom; */
-  margin: 0 0 0 0;
-  padding: 50px 0 50px 0;
+  margin-top: 100px;
 }
 
-/* *, *:before, *:after {
-    box-sizing: inherit;
-  } */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* .title-container {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.76);
+  height: 100px;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+  transition: 0.7s;
+  padding: 2.5vh 4vh 2.5vh 4vh;
+  font-size: 30px;
+} */
 
 #panels-container {
   min-height: 100vh;
@@ -42,9 +59,7 @@ h1 {
   border-right: 2px solid rgba(255, 255, 255, 0.7);
   /* text-align: center; */
   align-items: center;
-  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), 
-    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), 
-    background 0.2s;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
   /* font-size: 20px; */
   background-size: cover;
   background-position: center;
@@ -118,7 +133,6 @@ h1 {
   flex: 6;
   font-size: 20px;
 }
-
 
 .toggle {
   position: absolute;
