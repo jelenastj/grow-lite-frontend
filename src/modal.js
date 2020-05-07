@@ -54,11 +54,13 @@ function handleSelectVeggies (e) {
     e.preventDefault();
     e.target.querySelectorAll('.checkbox').forEach(checkbox => {
         if (checkbox.checked) {
-            ids.push(checkbox.value)
+            ids.push(parseInt(checkbox.value, 10))
         }
     })
 
     currentVeggies = ids.map(id => {
-        return veggies.find(veggie => veggie.id == id)
+        return veggies.find(veggie => veggie.id === id)
     })
+
+    console.log(currentVeggies);
 }
