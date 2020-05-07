@@ -1,0 +1,98 @@
+.panel {
+    position: relative;
+    color: white;
+    border-right: 2px solid rgba(255, 255, 255, 0.7);
+    /* text-align: center; */
+    align-items: center;
+    transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
+    /* font-size: 20px; */
+    background-size: cover;
+    background-position: center;
+    flex: 1;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    /* flex-direction: column;  */
+}
+
+.panel>div {
+    margin: 0;
+    width: 75%;
+    transition: 0.7s;
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.panel>*:first-child {
+    margin-top: 25px;
+    transform: translateY(-175%);
+    width: 90%;
+    height: 60%;
+    padding: 20px 10px;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #aaa;
+    border: solid 5px rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
+    border-color: rgba(0, 0, 0, 0.4);
+}
+
+.panel.open-active>*:first-child {
+    transform: translateY(0);
+}
+
+.panel>*:last-child {
+    transform: translateY(300%);
+}
+
+.panel.open-active>*:last-child {
+    transform: translateY(50%);
+}
+
+.veggie-info {
+    overflow-y: scroll;
+}
+
+/* .title-open {
+    transform: translateX(0);
+} */
+
+/* .instructions {
+    max-height: 40vh;
+    flex: 1;
+    overflow-y: scroll;
+  }
+  
+  .comments {
+    max-height: 30vh;
+    flex: 1;
+    overflow-y: scroll;
+  } */
+
+.panel.open {
+    flex: 6;
+    font-size: 20px;
+    overflow: scroll;
+}
+
+.panel-title-container {
+    position: absolute;
+    top: 110px;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 95px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 2s;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.title-close {
+    transform: translateX(-200%);
+}

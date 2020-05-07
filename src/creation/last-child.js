@@ -1,6 +1,11 @@
 function createLastChild(v) {
     const lastChild = document.createElement('div')
     lastChild.classList.add("comments");
+    
+    const header = document.createElement('h5')
+    header.classList.add('comment-header')
+    header.innerText = "Helpful Tips:"
+
 
     const comments = document.createElement('ul');
     v.comments.forEach(comment => {
@@ -55,7 +60,7 @@ function createLastChild(v) {
             body: JSON.stringify({
                 comment: {
                     user_id: currentUser.id, // abstract to currentUser
-                    content: newComment.innerText
+                    content: e.target.content.value
                 }
             })
         })
@@ -67,6 +72,7 @@ function createLastChild(v) {
         e.preventDefault();
     });
 
+    lastChild.append(header)
     lastChild.append(comments);
     lastChild.append(newCommentForm);
 

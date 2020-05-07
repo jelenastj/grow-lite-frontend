@@ -12,7 +12,8 @@ body {
 
 #title-bar {
   position: relative;
-  background-image: url("https://www.jongia.com/wp-content/uploads/2019/04/Vegetable-field-groot-shutterstock-aangekocht.jpg");
+  background-image: url("https://images.pexels.com/photos/974316/pexels-photo-974316.jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260");
+  background-size: 1600px 1800px;
   filter: brightness(0.9);
   /* border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
   /* background-position: bottom; */
@@ -26,112 +27,30 @@ h1 {
   font-size: 3em;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
   text-align: center;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+
+h2 {
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: larger;
+  font-style: italic;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  text-decoration-color: #DDDDDD;
 }
 
 *, *:before, *:after {
   box-sizing: inherit;
 }
 
-/* .title-container {
-  color: black;
-  background-color: rgba(255, 255, 255, 0.76);
-  height: 100px;
-  width: 100%;
-  margin-top: 100px;
-  text-align: center;
-  transition: 0.7s;
-  padding: 2.5vh 4vh 2.5vh 4vh;
-  font-size: 30px;
-} */
 
 #panels-container {
-  min-height: 100vh;
+  max-height: 85vh;
   /* border: 1px solid blue; */
   border: 3px solid rgba(255, 255, 255, 0.7);
   overflow: hidden;
   display: flex;
-}
-
-.panel {
-  position: relative;
-  color: white;
-  border-right: 2px solid rgba(255, 255, 255, 0.7);
-  /* text-align: center; */
-  align-items: center;
-  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), background 0.2s;
-  /* font-size: 20px; */
-  background-size: cover;
-  background-position: center;
-  flex: 1;
-  /* justify-content: center; */
-  display: flex;
-  flex-direction: column;
-  /* flex-direction: column;  */
-}
-
-.panel>div {
-  margin: 0;
-  width: 75%;
-  transition: 0.7s;
-  flex: 1 0 auto;
-  display: flex;
-  flex-direction: column;
-  padding: 0px 20px 0px 20px;
-  -moz-border-radius: 10px;
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
-  background: #aaa;
-  border: solid 5px rgba(0, 0, 0, 0.4);
-  background-color: rgba(0, 0, 0, 0.5);
-  border-color: rgba(0, 0, 0, 0.4);
-}
-
-.panel>*:first-child {
-  transform: translateY(-175%);
-}
-
-.panel.open-active>*:first-child {
-  transform: translateY(0);
-}
-
-/* .panel>*:nth-child(2) {
-  transform: translateY(-215%);
-}
-
-.panel.open-active>*:nth-child(2) {
-  transform: translateY(0);
-} */
-
-.panel>*:last-child {
-  transform: translateY(300%);
-}
-
-.panel.open-active>*:last-child {
-  transform: translateY(50%);
-}
-
-.veggie-info {
-  margin-top: 5%;
-  flex: 1;
-  overflow-y: scroll;
-}
-
-/* .instructions {
-  max-height: 40vh;
-  flex: 1;
-  overflow-y: scroll;
-}
-
-.comments {
-  max-height: 30vh;
-  flex: 1;
-  overflow-y: scroll;
-} */
-
-.panel.open {
-  flex: 6;
-  font-size: 20px;
 }
 
 .toggle {
@@ -140,6 +59,20 @@ h1 {
   top: 5px;
   font: 1em sans-serif;
   cursor: pointer;
+  display: inline-block;
+  /* padding:0.5em 3em; */
+  border: 0.16em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
+  font-size: medium;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
+  transition: all 0.15s;
+  background: none;
 }
 
 .user-comment {
@@ -149,6 +82,14 @@ h1 {
 .hidden {
   display: none;
 }
+
+
+
+
+
+
+
+/* old images  */
 
 /* #veggie-one {
   background-image: url("https://www.johnnyseeds.com/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw3dccf726/images/products/vegetables/03056jp_01_greenmultileafbutterfieldhorz.jpg?sw=774&cx=302&cy=0&cw=1196&ch=1196"
