@@ -1,3 +1,5 @@
+let currentUser;
+
 document.addEventListener("DOMContentLoaded", () =>{
 const userModal = document.getElementById("user-modal");
 const veggieModal = document.getElementById("veggies-modal")
@@ -26,5 +28,21 @@ function closeModal(id){
 function setUser(e){
     e.preventDefault();
     const username = e.target.username.value;
-//we'll come back to this
-}
+    console.log(username)
+    fetch("http://localhost:3000/users", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            username
+        })
+    })
+    .then(resp => resp.json())
+    .then(json => { 
+        currentUser = json.username;
+        closeModal("user-modal");
+    });
+};
+
