@@ -1,0 +1,152 @@
+html {
+  box-sizing: border-box;
+  background: black;
+  font-family: 'helvetica neue';
+  font-size: 20px;
+  font-weight: 200;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  color: white;
+  /* font-family: 'Amatic SC', cursive; */
+  font-size: 3em;
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+  text-align: center;
+  background-image: url("https://www.jongia.com/wp-content/uploads/2019/04/Vegetable-field-groot-shutterstock-aangekocht.jpg");
+  filter: brightness(0.9);
+  /* border-bottom: 2px solid rgba(255, 255, 255, 0.7); */
+  /* background-position: bottom; */
+  margin: 0 0 0 0;
+  padding: 50px 0 50px 0;
+}
+
+/* *, *:before, *:after {
+    box-sizing: inherit;
+  } */
+
+#panels-container {
+  min-height: 100vh;
+  /* border: 1px solid blue; */
+  border: 3px solid rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  display: flex;
+}
+
+.panel {
+  position: relative;
+  color: white;
+  border-right: 2px solid rgba(255, 255, 255, 0.7);
+  /* text-align: center; */
+  align-items: center;
+  transition: font-size 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), 
+    flex 0.7s cubic-bezier(0.61, -0.19, 0.7, -0.11), 
+    background 0.2s;
+  /* font-size: 20px; */
+  background-size: cover;
+  background-position: center;
+  flex: 1;
+  /* justify-content: center; */
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column;  */
+}
+
+.panel>div {
+  margin: 0;
+  width: 75%;
+  transition: 0.7s;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+  padding: 0px 20px 0px 20px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #aaa;
+  border: solid 5px rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.4);
+}
+
+.panel>*:first-child {
+  transform: translateY(-175%);
+}
+
+.panel.open-active>*:first-child {
+  transform: translateY(0);
+}
+
+/* .panel>*:nth-child(2) {
+  transform: translateY(-215%);
+}
+
+.panel.open-active>*:nth-child(2) {
+  transform: translateY(0);
+} */
+
+.panel>*:last-child {
+  transform: translateY(300%);
+}
+
+.panel.open-active>*:last-child {
+  transform: translateY(50%);
+}
+
+.veggie-info {
+  margin-top: 5%;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+/* .instructions {
+  max-height: 40vh;
+  flex: 1;
+  overflow-y: scroll;
+}
+
+.comments {
+  max-height: 30vh;
+  flex: 1;
+  overflow-y: scroll;
+} */
+
+.panel.open {
+  flex: 6;
+  font-size: 20px;
+}
+
+
+.toggle {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  font: 1em sans-serif;
+}
+
+/* #veggie-one {
+  background-image: url("https://www.johnnyseeds.com/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw3dccf726/images/products/vegetables/03056jp_01_greenmultileafbutterfieldhorz.jpg?sw=774&cx=302&cy=0&cw=1196&ch=1196"
+  );
+}
+
+#veggie-two {
+  background-image: url("https://static.toiimg.com/photo/68903018.cms");
+}
+#veggie-three {
+  background-image: url("https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/cucumber-slice-royalty-free-image-153556336-1562870568.jpg");
+}
+#veggie-four {
+  background-image: url("https://www.jessicagavin.com/wp-content/uploads/2019/02/carrots-7-1200.jpg"
+  );
+}
+#veggie-five {
+  background-image: url("https://www.highmowingseeds.com/media/catalog/product/cache/f24fe076cc2f73119e7261920a5836c5/2/8/2874.jpg"
+
+  );
+}
+#veggie-six {
+  background-image: url("https://images.unsplash.com/photo-1570586437263-ab629fccc818?ixlib=rb-1.2.1&w=1000&q=80");
+} */
