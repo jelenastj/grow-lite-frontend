@@ -19,6 +19,16 @@ function createToggleButton() {
     return toggleButton;
 }
 
+function createTitle(v) {
+    const titleContainer = document.createElement('span')
+    const title = document.createElement('h3');
+    title.innerText = v.name;
+    titleContainer.append(title);
+    titleContainer.classList.add('panel-title-container');
+    return titleContainer;
+}
+
+
 
 function toggleOpen() {
     if (this.innerText === "⇲") {

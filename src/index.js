@@ -21,6 +21,7 @@ function createPanels() {
     currentVeggies.forEach((veggie, index) => {
         const container = createContainer(veggie, index);
         container.append(createFirstChild(veggie));
+        container.append(createTitle(veggie));
         container.append(createToggleButton());
         container.append(createLastChild(veggie));
         panelsContainer.append(container);

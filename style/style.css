@@ -28,6 +28,7 @@ h1 {
   text-align: center;
   margin-top: 80px;
 }
+
 h3 {
   color: white;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -151,18 +152,18 @@ h3 {
   top: 5px;
   font: 1em sans-serif;
   cursor: pointer;
-  display:inline-block;
+  display: inline-block;
   /* padding:0.5em 3em; */
-  border:0.16em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
+  border: 0.16em solid #FFFFFF;
+  margin: 0 0.3em 0.3em 0;
   box-sizing: border-box;
-  text-decoration:none;
-  text-transform:uppercase;
-  font-family:'Roboto',sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: 'Roboto', sans-serif;
   font-size: medium;
-  font-weight:400;
-  color:#FFFFFF;
-  text-align:center;
+  font-weight: 400;
+  color: #FFFFFF;
+  text-align: center;
   transition: all 0.15s;
   background: none;
 }
@@ -175,44 +176,17 @@ h3 {
   display: none;
 }
 
-.modal-button {
-  display:inline-block;
-  padding:0.5em 3em;
-  border:0.16em solid #FFFFFF;
-  margin:0 0.3em 0.3em 0;
-  box-sizing: border-box;
-  text-decoration:none;
-  text-transform:uppercase;
-  font-family:'Roboto',sans-serif;
-  font-size: large;
-  font-weight:400;
-  color:#FFFFFF;
-  text-align:center;
-  transition: all 0.15s;
-  background: none;
-  /* position: absolute;
-  left: 100px;
-  top: 150px; */
-  }
-  .modal-button:hover{
-  color:#DDDDDD;
-  border-color:#DDDDDD;
-  }
-  .modal-button:active{
-  color:#BBBBBB;
-  border-color:#BBBBBB;
-  }
-  @media all and (max-width:30em){
-    .modal-button{
-  display:block;
-  margin:0.4em auto;
-  }
-  }
-
-
-
-
-
+.panel-title-container {
+  color: black;
+  background-color: rgba(255, 255, 255, 0.76);
+  height: 100px;
+  width: 100%;
+  margin-top: 100px;
+  text-align: center;
+  transition: 0.7s;
+  /* padding: 2.5vh 4vh 2.5vh 4vh; */
+  font-size: 30px;
+}
 
 /* #veggie-one {
   background-image: url("https://www.johnnyseeds.com/dw/image/v2/BBBW_PRD/on/demandware.static/-/Sites-jss-master/default/dw3dccf726/images/products/vegetables/03056jp_01_greenmultileafbutterfieldhorz.jpg?sw=774&cx=302&cy=0&cw=1196&ch=1196"
