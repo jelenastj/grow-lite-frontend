@@ -37,4 +37,5 @@ function toggleOpen() {
         this.innerText = "⇲"
     };
     this.parentElement.classList.toggle('open');
+    document.querySelectorAll('.panel-title-container').forEach(title => title.classList.toggle('title-close'))
 };
