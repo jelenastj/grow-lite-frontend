@@ -1,11 +1,12 @@
 const panelsContainer = document.getElementById('panels-container');
-let veggies;
+veggies = [];
 
 fetch("http://localhost:3000/veggies")
     .then(resp => resp.json())
     .then(json => {
         veggies = json;
         createPanels();
+        addCheckBoxesToVeggieForm();
         panelListeners();
     });
 
