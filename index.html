@@ -10,6 +10,7 @@
     <script src="src/creation/container.js" type="text/javascript"></script>
     <script src="src/creation/first-child.js" type="text/javascript"></script>
     <script src="src/creation/last-child.js" type="text/javascript"></script>
+    <script src="src/modal.js" type="text/javascript"></script>
 </head>
 
 <body>
@@ -30,9 +31,19 @@
         <div class="modal">
             <div class="close">+</div>
             <img class="modal-avatar" src=https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/woman-farmer-light-skin-tone.png alt="Farmer Woman">
-            <form>
-                <input class="username" type="text" placeholder="Username">
+            <form id="user-form">
+                <input class="username" name="username" type="text" placeholder="Username">
                 <input class="sign-up-button" type="Submit" value="Sign Up">
+            </form>
+        </div>
+    </div>
+
+    <div id="veggies-modal" class="modal-bg">
+        <div class="modal">
+            <div class="close">+</div>
+            <img class="modal-avatar" src="https://cdn.clipart.email/b8cdc1571f6f94e6291fe1b43360e450_transparent-thanksgiving-clipart-transparent-background-horn-of-_920-721.png" alt="Veggies">
+            <form id="veggies-form">
+                <input class="veggie-select-button" type="Submit" value="Submit">
             </form>
         </div>
     </div>

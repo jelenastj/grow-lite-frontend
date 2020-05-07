@@ -7,6 +7,8 @@ function createLastChild(v) {
         const li = document.createElement('li');
         li.dataset.id = comment.id
         li.innerText = comment.content;
+        // add username <span> to the li
+        // ?? how do we account for a comment who's username has changed
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
@@ -20,6 +22,8 @@ function createLastChild(v) {
 
     const newCommentForm = document.createElement('form');
     newCommentForm.id = `${v.name}-comment`;
+    newCommentForm.classList.add('comment-form')
+    newCommentForm.classList.add('hidden')
     const text = document.createElement('input');
     text.name = "content"
     text.placeholder = "add a tip"
@@ -28,11 +32,12 @@ function createLastChild(v) {
     submit.type = "submit";
     submit.value = "Add";
 
+
     newCommentForm.append(text);
     newCommentForm.append(submit);
     newCommentForm.addEventListener('submit', (e) => {
         const newComment = document.createElement('li');
-        newComment.innerText = e.target.content.value;
+        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span> ${e.target.content.value}`;
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
@@ -49,7 +54,7 @@ function createLastChild(v) {
             },
             body: JSON.stringify({
                 comment: {
-                    user_id: 4, // abstract to currentUser
+                    user_id: currentUser.id, // abstract to currentUser
                     content: newComment.innerText
                 }
             })
