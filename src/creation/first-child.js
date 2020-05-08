@@ -21,10 +21,20 @@ function createFirstChild(v) {
     dataList.append(sun);
     dataList.append(season);
 
+    const instructionsHeader = document.createElement('h4');
+    instructionsHeader.classList.add("instruction-head");
+    instructionsHeader.innerText = "How to Grow:"
+
+    const instructions = document.createElement('p');
+    instructions.classList.add('instructions');
+    instructions.innerHTML = v.instructions
+
 
     firstChild.append(name);
     firstChild.append(description);
     firstChild.append(dataList);
+    firstChild.append(instructionsHeader);
+    firstChild.append(instructions);
 
     return firstChild;
 }
