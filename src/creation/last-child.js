@@ -47,7 +47,7 @@ function createLastChild(v) {
     newCommentForm.append(submit);
     newCommentForm.addEventListener('submit', (e) => {
         const newComment = document.createElement('p');
-        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span><br />g ${e.target.content.value}`;
+        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span><br /> ${e.target.content.value}`;
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
