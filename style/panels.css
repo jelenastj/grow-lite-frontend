@@ -18,7 +18,7 @@
 
 .panel>div {
     margin: 0;
-    width: 75%;
+    width: 90%;
     transition: 0.7s;
     flex: 1 0 auto;
     display: flex;
@@ -49,7 +49,7 @@
 }
 
 .panel.open-active>*:last-child {
-    transform: translateY(50%);
+    transform: translateY(10%);
 }
 
 .veggie-info {

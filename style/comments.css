@@ -1,30 +1,56 @@
 .comments {
+    /* margin-top: 25px; */
+    width: 90%;
+    height: 40%;
+    /* border: 2px solid white; */
+    /* background-image: url("https://www.draxbiomass.com/wp-content/uploads/2017/07/Draxbiomass_Soil_Hero.jpg");
+    background-position: center;
+    background-size: cover; */
 
-
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #aaa;
+    /* border: solid 5px rgba(0, 0, 0, 0.4); */
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 0px 15px;
 }
 
 .comment-header {
-
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1em;
+    padding-bottom: 0;
+    text-shadow: 0 0 4px rgba(0, 0, 0, 0.72), 0 0 14px rgba(0, 0, 0, 0.45);
+    text-decoration-color: #DDDDDD;
 }
 
 .comments-container {
-    width: 90%;
-    height: 40%;
+    width: 100%;
+    height: 50%;
     overflow-y: scroll;
 }
 
-.comment {
+/* .comment {
 
-}
+} */
 
 .user-comment {
-
+    color: rgb(179, 100, 26);
 }
 
 .delete-comment {
-
+   margin-left: 20px;
 }
 
-.comment-form {
-    
+.comment-input {
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    width: 100%;
+    font-size: 20px;
+    color: whitesmoke
 }
+/* .comment-form {
+  
+} */
