@@ -51,9 +51,10 @@ function setUser(e){
 };
 
 function showDeleteButton () {
+    document.querySelectorAll('.delete-comment').forEach(del => del.classList.add('hidden'));
     document.querySelectorAll('p.comment').forEach( comment => {
         if (comment.querySelector('span').innerText === currentUser.username) {
-            comment.querySelector('button').classList.remove('hidden')
+            comment.querySelector('button').classList.remove('hidden');
         }
     });
 }

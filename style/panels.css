@@ -96,9 +96,3 @@
 .title-close {
     transform: translateX(-200%);
 }
-
-.comments-container {
-    width: 90%;
-    height: 40%;
-    overflow-y: scroll;
-}
