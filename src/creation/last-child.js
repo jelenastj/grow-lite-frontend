@@ -14,7 +14,7 @@ function createLastChild(v) {
         const p = document.createElement('p');
         p.classList.add('comment')
         p.dataset.id = comment.id
-        p.innerHTML = `<span class="user-comment">${comment.username}</span> ${comment.content}`
+        p.innerHTML = `<span class="user-comment">${comment.username}</span><br /> ${comment.content}`
         // add username <span> to the p
         // ?? how do we account for a comment who's username has changed
 
@@ -33,8 +33,7 @@ function createLastChild(v) {
     newCommentForm.id = `${v.name}-comment`;
     newCommentForm.classList.add('comment-form');
     newCommentForm.classList.add('hidden');
-    const text = document.createElement('input');
-    // text.type = "text-area"
+    const text = document.createElement('input'); // possibly change to text area
     text.name = "content"
     text.placeholder = "add a tip"
 
@@ -47,7 +46,7 @@ function createLastChild(v) {
     newCommentForm.append(submit);
     newCommentForm.addEventListener('submit', (e) => {
         const newComment = document.createElement('p');
-        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span> ${e.target.content.value}`;
+        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span><br />g ${e.target.content.value}`;
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
