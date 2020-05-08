@@ -44,10 +44,23 @@ function setUser(e){
     .then(json => { 
         currentUser = json;
         document.getElementById('user-button').innerText = `Hi, ${currentUser.username}!`
-        document.querySelectorAll('.comment-form').forEach(form => form.classList.remove('hidden'))
+        showDeleteButton();
+        showCommentsForm();
         closeModal("user-modal");
     });
 };
+
+function showDeleteButton () {
+    document.querySelectorAll('p.comment').forEach( comment => {
+        if (comment.querySelector('span').innerText === currentUser.username) {
+            comment.querySelector('button').classList.remove('hidden')
+        }
+    });
+}
+
+function showCommentsForm () {
+    document.querySelectorAll('.comment-form').forEach(form => form.classList.remove('hidden'));
+}
 
 function handleSelectVeggies (e) {
     let ids = [];

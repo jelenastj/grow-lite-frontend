@@ -9,9 +9,10 @@ function createLastChild(v) {
 
     const comments = document.createElement('div');
     comments.classList.add('comments-container')
-    
+
     v.comments.forEach(comment => {
         const p = document.createElement('p');
+        p.classList.add('comment')
         p.dataset.id = comment.id
         p.innerHTML = `<span class="user-comment">${comment.username}</span> ${comment.content}`
         // add username <span> to the p
@@ -19,6 +20,7 @@ function createLastChild(v) {
 
         const deleteButton = document.createElement('button')
         deleteButton.classList.add("delete-comment")
+        deleteButton.classList.add('hidden')
         deleteButton.dataset.num = v.id
         deleteButton.innerText = "Delete"
         deleteButton.addEventListener('click', deleteComment)
@@ -29,8 +31,8 @@ function createLastChild(v) {
 
     const newCommentForm = document.createElement('form');
     newCommentForm.id = `${v.name}-comment`;
-    newCommentForm.classList.add('comment-form')
-    newCommentForm.classList.add('hidden')
+    newCommentForm.classList.add('comment-form');
+    newCommentForm.classList.add('hidden');
     const text = document.createElement('input');
     text.name = "content"
     text.placeholder = "add a tip"
