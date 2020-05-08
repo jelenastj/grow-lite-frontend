@@ -34,6 +34,7 @@ function createLastChild(v) {
     newCommentForm.classList.add('comment-form');
     newCommentForm.classList.add('hidden');
     const text = document.createElement('input');
+    // text.type = "text-area"
     text.name = "content"
     text.placeholder = "add a tip"
 
