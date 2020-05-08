@@ -18,7 +18,15 @@
     padding: 20px;
     position: relative;
     overflow-y: scroll;
+    
 }
+
+.checkbox {
+    margin: 0px 4px 0px 30px;
+    display: inline-block;
+    text-align: center;
+}
+
 
 .username {
     width: 50%;
@@ -88,7 +96,13 @@
     top: 40px;
     right: 40px;
 }
-
+.veggie-select-button {
+    display: block;
+    position: absolute;
+    left: 45%;
+    bottom: 5px;
+   
+}
 
 /* .sign-up-button {
 
