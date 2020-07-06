@@ -12,7 +12,7 @@ fetch("http://localhost:3000/veggies")
     });
 
 
-function renderVeggies () {
+function renderVeggies() {
     createPanels()
     panelListeners()
 }
@@ -20,10 +20,8 @@ function renderVeggies () {
 function createPanels() {
     currentVeggies.forEach((veggie, index) => {
         const container = createContainer(veggie, index);
-        container.append(createFirstChild(veggie));
-        container.append(createTitle(veggie));
-        container.append(createToggleButton());
-        container.append(createLastChild(veggie));
+        container.append(createFirstChild(veggie), createTitle(veggie), createToggleButton(), createLastChild(veggie));
+       
         panelsContainer.append(container);
     });
 
@@ -39,16 +37,3 @@ function panelListeners() {
     const panels = document.querySelectorAll('.panel');
     panels.forEach(panel => panel.addEventListener('transitionend', toggleActive));
 };
-
-
-
-
-
-// OLD
-
-// function toggleOpen() {
-//     this.classList.toggle('open');
-//     // slide title out of view
-// };
-
-// panels.forEach(panel => panel.addEventListener('click', toggleOpen));

@@ -29,31 +29,30 @@ function createLastChild(v) {
         comments.append(p);
     });
 
-    const newCommentForm = document.createElement('form');
-    newCommentForm.id = `${v.name}-comment`;
-    newCommentForm.classList.add('comment-form');
-    newCommentForm.classList.add('hidden');
-    const text = document.createElement('input'); // possibly change to text area
-    text.classList.add('comment-input');
-    text.name = "content"
-    text.placeholder = "add a tip"
+        const newCommentForm = document.createElement('form');
+        newCommentForm.id = `${v.name}-comment`;
+        newCommentForm.classList.add('comment-form');
+        newCommentForm.classList.add('hidden');
+            const text = document.createElement('input'); // possibly change to text area
+            text.classList.add('comment-input');
+            text.name = "content"
+            text.placeholder = "add a tip"
 
-    const submit = document.createElement('input');
-    submit.type = "submit";
-    submit.value = "Add";
+            const submit = document.createElement('input');
+            submit.type = "submit";
+            submit.value = "Add";
 
 
-    newCommentForm.append(text);
-    newCommentForm.append(submit);
-    newCommentForm.addEventListener('submit', (e) => {
-        const newComment = document.createElement('p');
-        newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span><br /> ${e.target.content.value}`;
+        newCommentForm.append(text, submit);
+        newCommentForm.addEventListener('submit', (e) => {
+            const newComment = document.createElement('p');
+            newComment.innerHTML = `<span class="user-comment">${currentUser.username}</span><br /> ${e.target.content.value}`;
 
-        const deleteButton = document.createElement('button')
-        deleteButton.classList.add("delete-comment")
-        deleteButton.innerText = "Delete"
-        deleteButton.addEventListener('click', deleteComment)
-        newComment.append(deleteButton)
+                const deleteButton = document.createElement('button')
+                deleteButton.classList.add("delete-comment")
+                deleteButton.innerText = "Delete"
+                deleteButton.addEventListener('click', deleteComment)
+            newComment.append(deleteButton)
 
 
         fetch(`http://localhost:3000/veggies/${v.id}`, {
@@ -78,9 +77,7 @@ function createLastChild(v) {
         e.preventDefault();
     });
 
-    lastChild.append(header)
-    lastChild.append(comments);
-    lastChild.append(newCommentForm);
+    lastChild.append(header, comments, newCommentForm)
 
     return lastChild;
 }
