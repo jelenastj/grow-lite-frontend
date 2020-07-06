@@ -1,4 +1,4 @@
-# grow-lite
+# Grow-Lite
 
 Grow-Lite is a fun, digestable source to learn how to grow vegetables in your own backyard!
 
