@@ -48,5 +48,6 @@ Make sure you have [npm installed](https://www.npmjs.com/get-npm) and [rails](ht
 
 **Software Engineers** <br />
 [Jelena Stjepanović](https://www.linkedin.com/in/jelenast/)
+<br />
 [Robert Collins](https://www.linkedin.com/in/rpc219/)
 
