@@ -51,3 +51,5 @@ Make sure you have [npm installed](https://www.npmjs.com/get-npm) and [rails](ht
 <br />
 [Robert Collins](https://www.linkedin.com/in/rpc219/)
 
+**UX Designer**
+[Sam Jaklich](https://samjaklich.com/)
