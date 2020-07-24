@@ -4,6 +4,8 @@ Grow-Lite is a fun, digestable source to learn how to grow vegetables in your ow
 
 ![Grow Lite](/assets/fullView.png)
 
+[Video Demo](https://www.youtube.com/watch?v=GNW3oxK_hwk)
+
 ## Motivation
 
 We felt that people generally are interested in growing home-grown-food, but that many of the sources to learn such a skill are too dense. We wanted to create a platform for users to access growing information on their favorite vegetables in a way that was appealing and explanatory, but not overwhelming.
@@ -35,6 +37,7 @@ Make sure you have [npm installed](https://www.npmjs.com/get-npm) and [rails](ht
 
 * Clone [the back-end repository](https://github.com/jelenastj/grow-lite-backend)
 * Naviagte to the repository and run `bundle install`
+* Run `rails db:create` and `rails db:migrate`
 * Then run `rails s` to start the server
 * Navigate to localhost:3000 in your browser to make sure it is working properly
 
